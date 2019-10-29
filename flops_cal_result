@@ -1,0 +1,1111 @@
+comment the get_label_map for only using VOC
+PeleeNet(
+  2.209 GMac, 100.000% MACs, 
+  (StemBlock): StemBlock(
+    0.075 GMac, 3.413% MACs, 
+    (conv_3x3_first): conv_bn_relu(
+      0.022 GMac, 1.004% MACs, 
+      (conv): Conv2d(0.02 GMac, 0.904% MACs, 3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (batch_norm): BatchNorm2d(0.001 GMac, 0.067% MACs, 32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(0.001 GMac, 0.033% MACs, inplace)
+    )
+    (conv_1x1_left): conv_bn_relu(
+      0.013 GMac, 0.586% MACs, 
+      (conv): Conv2d(0.012 GMac, 0.535% MACs, 32, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (batch_norm): BatchNorm2d(0.001 GMac, 0.033% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(0.0 GMac, 0.017% MACs, inplace)
+    )
+    (conv_3x3_left): conv_bn_relu(
+      0.027 GMac, 1.230% MACs, 
+      (conv): Conv2d(0.027 GMac, 1.205% MACs, 16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (batch_norm): BatchNorm2d(0.0 GMac, 0.017% MACs, 32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(0.0 GMac, 0.008% MACs, inplace)
+    )
+    (max_pool_right): MaxPool2d(0.001 GMac, 0.033% MACs, kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (conv_1x1_last): conv_bn_relu(
+      0.012 GMac, 0.561% MACs, 
+      (conv): Conv2d(0.012 GMac, 0.535% MACs, 64, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (batch_norm): BatchNorm2d(0.0 GMac, 0.017% MACs, 32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(0.0 GMac, 0.008% MACs, inplace)
+    )
+  )
+  (DenseBlock_1): DenseBlock(
+    0.51 GMac, 23.102% MACs, 
+    (dense_layer_0): dense_layer(
+      0.146 GMac, 6.630% MACs, 
+      (dense_left_way): Sequential(
+        0.066 GMac, 3.008% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.013 GMac, 0.586% MACs, 
+          (conv): Conv2d(0.012 GMac, 0.535% MACs, 32, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.001 GMac, 0.033% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.017% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.054 GMac, 2.422% MACs, 
+          (conv): Conv2d(0.053 GMac, 2.409% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.08 GMac, 3.622% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.013 GMac, 0.586% MACs, 
+          (conv): Conv2d(0.012 GMac, 0.535% MACs, 32, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.001 GMac, 0.033% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.017% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.054 GMac, 2.422% MACs, 
+          (conv): Conv2d(0.053 GMac, 2.409% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.014 GMac, 0.615% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_1): dense_layer(
+      0.17 GMac, 7.701% MACs, 
+      (dense_left_way): Sequential(
+        0.078 GMac, 3.543% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.025 GMac, 1.121% MACs, 
+          (conv): Conv2d(0.024 GMac, 1.071% MACs, 64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.001 GMac, 0.033% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.017% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.054 GMac, 2.422% MACs, 
+          (conv): Conv2d(0.053 GMac, 2.409% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.092 GMac, 4.158% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.025 GMac, 1.121% MACs, 
+          (conv): Conv2d(0.024 GMac, 1.071% MACs, 64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.001 GMac, 0.033% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.017% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.054 GMac, 2.422% MACs, 
+          (conv): Conv2d(0.053 GMac, 2.409% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.014 GMac, 0.615% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_2): dense_layer(
+      0.194 GMac, 8.772% MACs, 
+      (dense_left_way): Sequential(
+        0.09 GMac, 4.078% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.037 GMac, 1.656% MACs, 
+          (conv): Conv2d(0.035 GMac, 1.606% MACs, 96, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.001 GMac, 0.033% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.017% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.054 GMac, 2.422% MACs, 
+          (conv): Conv2d(0.053 GMac, 2.409% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.104 GMac, 4.693% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.037 GMac, 1.656% MACs, 
+          (conv): Conv2d(0.035 GMac, 1.606% MACs, 96, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.001 GMac, 0.033% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.017% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.054 GMac, 2.422% MACs, 
+          (conv): Conv2d(0.053 GMac, 2.409% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.014 GMac, 0.615% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+      )
+    )
+  )
+  (trans_conv_1): conv_bn_relu(
+    0.097 GMac, 4.384% MACs, 
+    (conv): Conv2d(0.095 GMac, 4.283% MACs, 128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.001 GMac, 0.067% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.001 GMac, 0.033% MACs, inplace)
+  )
+  (trans_ave_1): AvgPool2d(0.001 GMac, 0.033% MACs, kernel_size=2, stride=2, padding=0)
+  (DenseBlock_2): DenseBlock(
+    0.253 GMac, 11.449% MACs, 
+    (dense_layer_0): dense_layer(
+      0.054 GMac, 2.461% MACs, 
+      (dense_left_way): Sequential(
+        0.025 GMac, 1.153% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.012 GMac, 0.548% MACs, 
+          (conv): Conv2d(0.012 GMac, 0.535% MACs, 128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.013 GMac, 0.605% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.029 GMac, 1.307% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.012 GMac, 0.548% MACs, 
+          (conv): Conv2d(0.012 GMac, 0.535% MACs, 128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.013 GMac, 0.605% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.003 GMac, 0.154% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_1): dense_layer(
+      0.06 GMac, 2.728% MACs, 
+      (dense_left_way): Sequential(
+        0.028 GMac, 1.287% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.015 GMac, 0.682% MACs, 
+          (conv): Conv2d(0.015 GMac, 0.669% MACs, 160, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.013 GMac, 0.605% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.032 GMac, 1.441% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.015 GMac, 0.682% MACs, 
+          (conv): Conv2d(0.015 GMac, 0.669% MACs, 160, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.013 GMac, 0.605% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.003 GMac, 0.154% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_2): dense_layer(
+      0.066 GMac, 2.996% MACs, 
+      (dense_left_way): Sequential(
+        0.031 GMac, 1.421% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.018 GMac, 0.816% MACs, 
+          (conv): Conv2d(0.018 GMac, 0.803% MACs, 192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.013 GMac, 0.605% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.035 GMac, 1.575% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.018 GMac, 0.816% MACs, 
+          (conv): Conv2d(0.018 GMac, 0.803% MACs, 192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.013 GMac, 0.605% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.003 GMac, 0.154% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_3): dense_layer(
+      0.072 GMac, 3.264% MACs, 
+      (dense_left_way): Sequential(
+        0.034 GMac, 1.555% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.021 GMac, 0.950% MACs, 
+          (conv): Conv2d(0.021 GMac, 0.937% MACs, 224, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.013 GMac, 0.605% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.038 GMac, 1.709% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.021 GMac, 0.950% MACs, 
+          (conv): Conv2d(0.021 GMac, 0.937% MACs, 224, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.013 GMac, 0.605% MACs, 
+          (conv): Conv2d(0.013 GMac, 0.602% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.003 GMac, 0.154% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+      )
+    )
+  )
+  (trans_conv_2): conv_bn_relu(
+    0.096 GMac, 4.334% MACs, 
+    (conv): Conv2d(0.095 GMac, 4.283% MACs, 256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.001 GMac, 0.033% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.0 GMac, 0.017% MACs, inplace)
+  )
+  (trans_ave_2): AvgPool2d(0.0 GMac, 0.017% MACs, kernel_size=2, stride=2, padding=0)
+  (DenseBlock_3): DenseBlock(
+    0.197 GMac, 8.937% MACs, 
+    (dense_layer_0): dense_layer(
+      0.02 GMac, 0.883% MACs, 
+      (dense_left_way): Sequential(
+        0.009 GMac, 0.422% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.006 GMac, 0.271% MACs, 
+          (conv): Conv2d(0.006 GMac, 0.268% MACs, 256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.01 GMac, 0.461% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.006 GMac, 0.271% MACs, 
+          (conv): Conv2d(0.006 GMac, 0.268% MACs, 256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.001 GMac, 0.038% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.038% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_1): dense_layer(
+      0.021 GMac, 0.950% MACs, 
+      (dense_left_way): Sequential(
+        0.01 GMac, 0.456% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.007 GMac, 0.304% MACs, 
+          (conv): Conv2d(0.007 GMac, 0.301% MACs, 288, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.011 GMac, 0.494% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.007 GMac, 0.304% MACs, 
+          (conv): Conv2d(0.007 GMac, 0.301% MACs, 288, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.001 GMac, 0.038% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.038% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_2): dense_layer(
+      0.022 GMac, 1.017% MACs, 
+      (dense_left_way): Sequential(
+        0.011 GMac, 0.489% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.007 GMac, 0.338% MACs, 
+          (conv): Conv2d(0.007 GMac, 0.335% MACs, 320, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.012 GMac, 0.528% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.007 GMac, 0.338% MACs, 
+          (conv): Conv2d(0.007 GMac, 0.335% MACs, 320, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.001 GMac, 0.038% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.038% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_3): dense_layer(
+      0.024 GMac, 1.084% MACs, 
+      (dense_left_way): Sequential(
+        0.012 GMac, 0.523% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.008 GMac, 0.371% MACs, 
+          (conv): Conv2d(0.008 GMac, 0.368% MACs, 352, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.012 GMac, 0.561% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.008 GMac, 0.371% MACs, 
+          (conv): Conv2d(0.008 GMac, 0.368% MACs, 352, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.001 GMac, 0.038% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.038% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_4): dense_layer(
+      0.025 GMac, 1.151% MACs, 
+      (dense_left_way): Sequential(
+        0.012 GMac, 0.556% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.009 GMac, 0.405% MACs, 
+          (conv): Conv2d(0.009 GMac, 0.402% MACs, 384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.013 GMac, 0.594% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.009 GMac, 0.405% MACs, 
+          (conv): Conv2d(0.009 GMac, 0.402% MACs, 384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.001 GMac, 0.038% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.038% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_5): dense_layer(
+      0.027 GMac, 1.217% MACs, 
+      (dense_left_way): Sequential(
+        0.013 GMac, 0.590% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.01 GMac, 0.438% MACs, 
+          (conv): Conv2d(0.01 GMac, 0.435% MACs, 416, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.014 GMac, 0.628% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.01 GMac, 0.438% MACs, 
+          (conv): Conv2d(0.01 GMac, 0.435% MACs, 416, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.001 GMac, 0.038% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.038% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_6): dense_layer(
+      0.028 GMac, 1.284% MACs, 
+      (dense_left_way): Sequential(
+        0.014 GMac, 0.623% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.01 GMac, 0.472% MACs, 
+          (conv): Conv2d(0.01 GMac, 0.468% MACs, 448, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.015 GMac, 0.661% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.01 GMac, 0.472% MACs, 
+          (conv): Conv2d(0.01 GMac, 0.468% MACs, 448, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.001 GMac, 0.038% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.038% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_7): dense_layer(
+      0.03 GMac, 1.351% MACs, 
+      (dense_left_way): Sequential(
+        0.015 GMac, 0.656% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.011 GMac, 0.505% MACs, 
+          (conv): Conv2d(0.011 GMac, 0.502% MACs, 480, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.015 GMac, 0.695% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.011 GMac, 0.505% MACs, 
+          (conv): Conv2d(0.011 GMac, 0.502% MACs, 480, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.003 GMac, 0.151% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.151% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.001 GMac, 0.038% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.038% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+  )
+  (trans_conv_3): conv_bn_relu(
+    0.095 GMac, 4.308% MACs, 
+    (conv): Conv2d(0.095 GMac, 4.283% MACs, 512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.0 GMac, 0.017% MACs, 512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.0 GMac, 0.008% MACs, inplace)
+  )
+  (trans_ave_3): AvgPool2d(0.0 GMac, 0.008% MACs, kernel_size=2, stride=2, padding=0)
+  (DenseBlock_4): DenseBlock(
+    0.058 GMac, 2.635% MACs, 
+    (dense_layer_0): dense_layer(
+      0.009 GMac, 0.393% MACs, 
+      (dense_left_way): Sequential(
+        0.004 GMac, 0.191% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.003 GMac, 0.149% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.148% MACs, 512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.004 GMac, 0.202% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.003 GMac, 0.149% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.148% MACs, 512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.0 GMac, 0.011% MACs, 
+          (conv): Conv2d(0.0 GMac, 0.010% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_1): dense_layer(
+      0.009 GMac, 0.411% MACs, 
+      (dense_left_way): Sequential(
+        0.004 GMac, 0.200% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.158% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.158% MACs, 544, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.005 GMac, 0.211% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.158% MACs, 
+          (conv): Conv2d(0.003 GMac, 0.158% MACs, 544, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.0 GMac, 0.011% MACs, 
+          (conv): Conv2d(0.0 GMac, 0.010% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_2): dense_layer(
+      0.009 GMac, 0.430% MACs, 
+      (dense_left_way): Sequential(
+        0.005 GMac, 0.210% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.168% MACs, 
+          (conv): Conv2d(0.004 GMac, 0.167% MACs, 576, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.005 GMac, 0.220% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.168% MACs, 
+          (conv): Conv2d(0.004 GMac, 0.167% MACs, 576, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.0 GMac, 0.011% MACs, 
+          (conv): Conv2d(0.0 GMac, 0.010% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_3): dense_layer(
+      0.01 GMac, 0.448% MACs, 
+      (dense_left_way): Sequential(
+        0.005 GMac, 0.219% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.177% MACs, 
+          (conv): Conv2d(0.004 GMac, 0.176% MACs, 608, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.005 GMac, 0.230% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.177% MACs, 
+          (conv): Conv2d(0.004 GMac, 0.176% MACs, 608, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.0 GMac, 0.011% MACs, 
+          (conv): Conv2d(0.0 GMac, 0.010% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_4): dense_layer(
+      0.01 GMac, 0.467% MACs, 
+      (dense_left_way): Sequential(
+        0.005 GMac, 0.228% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.186% MACs, 
+          (conv): Conv2d(0.004 GMac, 0.185% MACs, 640, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.005 GMac, 0.239% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.186% MACs, 
+          (conv): Conv2d(0.004 GMac, 0.185% MACs, 640, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.0 GMac, 0.011% MACs, 
+          (conv): Conv2d(0.0 GMac, 0.010% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+    (dense_layer_5): dense_layer(
+      0.011 GMac, 0.486% MACs, 
+      (dense_left_way): Sequential(
+        0.005 GMac, 0.237% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.196% MACs, 
+          (conv): Conv2d(0.004 GMac, 0.195% MACs, 672, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+      (dense_right_way): Sequential(
+        0.005 GMac, 0.248% MACs, 
+        (conv_1x1): conv_bn_relu(
+          0.004 GMac, 0.196% MACs, 
+          (conv): Conv2d(0.004 GMac, 0.195% MACs, 672, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3_1): conv_bn_relu(
+          0.001 GMac, 0.042% MACs, 
+          (conv): Conv2d(0.001 GMac, 0.042% MACs, 64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+        (conv_3x3 2): conv_bn_relu(
+          0.0 GMac, 0.011% MACs, 
+          (conv): Conv2d(0.0 GMac, 0.010% MACs, 16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+        )
+      )
+    )
+  )
+  (trans_conv_4): conv_bn_relu(
+    0.05 GMac, 2.253% MACs, 
+    (conv): Conv2d(0.05 GMac, 2.243% MACs, 704, 704, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.0 GMac, 0.006% MACs, 704, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.0 GMac, 0.003% MACs, inplace)
+  )
+  (fe1_1): conv_bn_relu(
+    0.018 GMac, 0.819% MACs, 
+    (conv): Conv2d(0.018 GMac, 0.816% MACs, 704, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+  )
+  (fe1_2): conv_bn_relu(
+    0.015 GMac, 0.668% MACs, 
+    (conv): Conv2d(0.015 GMac, 0.667% MACs, 256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+  )
+  (fe2_1): conv_bn_relu(
+    0.001 GMac, 0.038% MACs, 
+    (conv): Conv2d(0.001 GMac, 0.037% MACs, 256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+  )
+  (fe2_2): conv_bn_relu(
+    0.003 GMac, 0.120% MACs, 
+    (conv): Conv2d(0.003 GMac, 0.120% MACs, 128, 256, kernel_size=(3, 3), stride=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+  )
+  (fe3_1): conv_bn_relu(
+    0.0 GMac, 0.014% MACs, 
+    (conv): Conv2d(0.0 GMac, 0.013% MACs, 256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+  )
+  (fe3_2): conv_bn_relu(
+    0.0 GMac, 0.013% MACs, 
+    (conv): Conv2d(0.0 GMac, 0.013% MACs, 128, 256, kernel_size=(3, 3), stride=(1, 1), bias=False)
+    (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+  )
+  (ResBlocks): ModuleList(
+    0.466 GMac, 21.079% MACs, 
+    (0): ResBlock(
+      0.137 GMac, 6.195% MACs, 
+      (left_conv1): conv_bn_relu(
+        0.024 GMac, 1.077% MACs, 
+        (conv): Conv2d(0.024 GMac, 1.071% MACs, 512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.004% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.002% MACs, inplace)
+      )
+      (left_conv2): conv_bn_relu(
+        0.053 GMac, 2.416% MACs, 
+        (conv): Conv2d(0.053 GMac, 2.409% MACs, 128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.004% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.002% MACs, inplace)
+      )
+      (left_conv3): conv_bn_relu(
+        0.012 GMac, 0.548% MACs, 
+        (conv): Conv2d(0.012 GMac, 0.535% MACs, 128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+      )
+      (right_conv): conv_bn_relu(
+        0.048 GMac, 2.154% MACs, 
+        (conv): Conv2d(0.047 GMac, 2.142% MACs, 512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+      )
+    )
+    (1): ResBlock(
+      0.274 GMac, 12.390% MACs, 
+      (left_conv1): conv_bn_relu(
+        0.048 GMac, 2.154% MACs, 
+        (conv): Conv2d(0.047 GMac, 2.142% MACs, 512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+      )
+      (left_conv2): conv_bn_relu(
+        0.107 GMac, 4.831% MACs, 
+        (conv): Conv2d(0.106 GMac, 4.819% MACs, 128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.008% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.004% MACs, inplace)
+      )
+      (left_conv3): conv_bn_relu(
+        0.024 GMac, 1.096% MACs, 
+        (conv): Conv2d(0.024 GMac, 1.071% MACs, 128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.017% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.008% MACs, inplace)
+      )
+      (right_conv): conv_bn_relu(
+        0.095 GMac, 4.308% MACs, 
+        (conv): Conv2d(0.095 GMac, 4.283% MACs, 512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.017% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.008% MACs, inplace)
+      )
+    )
+    (2): ResBlock(
+      0.045 GMac, 2.050% MACs, 
+      (left_conv1): conv_bn_relu(
+        0.009 GMac, 0.410% MACs, 
+        (conv): Conv2d(0.009 GMac, 0.408% MACs, 704, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+      )
+      (left_conv2): conv_bn_relu(
+        0.015 GMac, 0.669% MACs, 
+        (conv): Conv2d(0.015 GMac, 0.667% MACs, 128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+      )
+      (left_conv3): conv_bn_relu(
+        0.003 GMac, 0.152% MACs, 
+        (conv): Conv2d(0.003 GMac, 0.148% MACs, 128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+      )
+      (right_conv): conv_bn_relu(
+        0.018 GMac, 0.819% MACs, 
+        (conv): Conv2d(0.018 GMac, 0.816% MACs, 704, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.002% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.001% MACs, inplace)
+      )
+    )
+    (3): ResBlock(
+      0.007 GMac, 0.318% MACs, 
+      (left_conv1): conv_bn_relu(
+        0.001 GMac, 0.038% MACs, 
+        (conv): Conv2d(0.001 GMac, 0.037% MACs, 256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+      (left_conv2): conv_bn_relu(
+        0.004 GMac, 0.167% MACs, 
+        (conv): Conv2d(0.004 GMac, 0.167% MACs, 128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+      (left_conv3): conv_bn_relu(
+        0.001 GMac, 0.038% MACs, 
+        (conv): Conv2d(0.001 GMac, 0.037% MACs, 128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+      (right_conv): conv_bn_relu(
+        0.002 GMac, 0.075% MACs, 
+        (conv): Conv2d(0.002 GMac, 0.074% MACs, 256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.001% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+    )
+    (4): ResBlock(
+      0.003 GMac, 0.114% MACs, 
+      (left_conv1): conv_bn_relu(
+        0.0 GMac, 0.014% MACs, 
+        (conv): Conv2d(0.0 GMac, 0.013% MACs, 256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+      (left_conv2): conv_bn_relu(
+        0.001 GMac, 0.060% MACs, 
+        (conv): Conv2d(0.001 GMac, 0.060% MACs, 128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+      (left_conv3): conv_bn_relu(
+        0.0 GMac, 0.014% MACs, 
+        (conv): Conv2d(0.0 GMac, 0.013% MACs, 128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+      (right_conv): conv_bn_relu(
+        0.001 GMac, 0.027% MACs, 
+        (conv): Conv2d(0.001 GMac, 0.027% MACs, 256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+    )
+    (5): ResBlock(
+      0.0 GMac, 0.013% MACs, 
+      (left_conv1): conv_bn_relu(
+        0.0 GMac, 0.002% MACs, 
+        (conv): Conv2d(0.0 GMac, 0.001% MACs, 256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+      (left_conv2): conv_bn_relu(
+        0.0 GMac, 0.007% MACs, 
+        (conv): Conv2d(0.0 GMac, 0.007% MACs, 128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+      (left_conv3): conv_bn_relu(
+        0.0 GMac, 0.002% MACs, 
+        (conv): Conv2d(0.0 GMac, 0.001% MACs, 128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+      (right_conv): conv_bn_relu(
+        0.0 GMac, 0.003% MACs, 
+        (conv): Conv2d(0.0 GMac, 0.003% MACs, 256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (batch_norm): BatchNorm2d(0.0 GMac, 0.000% MACs, 256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(0.0 GMac, 0.000% MACs, inplace)
+      )
+    )
+  )
+  (loc_layers): ModuleList(
+    0.061 GMac, 2.739% MACs, 
+    (0): Conv2d(0.013 GMac, 0.602% MACs, 256, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): Conv2d(0.04 GMac, 1.807% MACs, 256, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (2): Conv2d(0.006 GMac, 0.250% MACs, 256, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (3): Conv2d(0.001 GMac, 0.063% MACs, 256, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (4): Conv2d(0.0 GMac, 0.015% MACs, 256, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (5): Conv2d(0.0 GMac, 0.002% MACs, 256, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  )
+  (conf_layers): ModuleList(
+    0.213 GMac, 9.636% MACs, 
+    (0): Conv2d(0.07 GMac, 3.162% MACs, 256, 84, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): Conv2d(0.105 GMac, 4.743% MACs, 256, 126, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (2): Conv2d(0.029 GMac, 1.314% MACs, 256, 126, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (3): Conv2d(0.007 GMac, 0.328% MACs, 256, 126, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (4): Conv2d(0.002 GMac, 0.079% MACs, 256, 84, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (5): Conv2d(0.0 GMac, 0.009% MACs, 256, 84, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  )
+)
+Flops:  2.21 GMac
+Params: 7.45 M
